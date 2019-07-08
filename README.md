@@ -5,33 +5,33 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 
 ## Question 1
 
-a) Define an enumeration called `iOSDeviceTypes` with member values `iPhone`, `iPad`, `iWatch`. Create a variable called `myDevice` and assign it one member value.
+a) Define an enumeration called `iOSDeviceType` with member values `iPhone`, `iPad`, `iWatch`. Create a variable called `myDevice` and assign it one member value.
 
 b) Adjust your code above so that `iPhone` and `iPad` have associated values of type String which represents the model number, eg: `iPhone("6 Plus")`. Use a switch case and let syntax to print out the model number of each device.
 
 
 ## Question 2
 
-a) Write an enum called `Shape` and give it cases for `triangle`, `rectangle`, `square` and `hexagon`.
+a) Write an enum called `Shape` and give it cases for `triangle`, `rectangle`, `square`, `pentagon`, and `hexagon`.
 
-b) Write a method inside `Shape` that returns how many sides the shape has. Then assign a variable to `Shape.pentagon` and then print how many sides it has.
+b) Write a method inside `Shape` that returns how many sides the shape has. Create a variable called `myFavoritePolygon` and assign it to one of the shapes above, then print out how many sides it has.
 
 c) Re-write `Shape` so that each case has an associated value of type Int that will represent the length of the sides (assume the shapes are regular polygons so all the sides are the same length) and write a method inside that returns the perimeter of the shape.
 
 
 ## Question 3
 
-Write an enum called `OperatingSystems` and give it cases for `Windows`, `Mac`, and `Linux`. Create an array of 10 `OperatingSystems` where each one is set to a random operating system. Then, iterate through the array and print out a message depending on the operating system.
+Write an enum called `OperatingSystem` and give it cases for `windows`, `mac`, and `linux`. Create an array of 10 `OperatingSystem` objects where each one is set to a random operating system. Then, iterate through the array and print out a message depending on the operating system.
 
 
 ## Question 4
 
 You are working on a game in which your character is exploring a grid-like map. You get the original location of the character and the steps he will take.
 
-- A step .Up will increase the y coordinate by 1.
-- A step .Down will decrease the y coordinate by 1.
-- A step .Right will increase the x coordinate by 1.
-- A step .Left will decrease the x coordinate by 1.
+- A step .up will increase the y coordinate by 1.
+- A step .down will decrease the y coordinate by 1.
+- A step .right will increase the x coordinate by 1.
+- A step .left will decrease the x coordinate by 1.
 - Print the final location of the character after all the steps have been taken.
 
 ```swift
@@ -43,7 +43,7 @@ enum Direction {
 }
 
 var location = (x: 0, y: 0)
-var steps: [Direction] = [.Up, .Up, .Left, .Down, .Left]
+var steps: [Direction] = [.up, .up, .left, .down, .left]
 
 // your code here
 ```
