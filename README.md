@@ -7,22 +7,70 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 
 a) Define an enumeration called `iOSDeviceType` with member values `iPhone`, `iPad`, `iWatch`. Create a variable called `myDevice` and assign it one member value.
 
+```swift
+enum iOSDeviceType: String{
+    case iPhone = "iPhone"
+    case iPad = "iPad"
+    case iWatch = "iWatch"
+}
+var myDevice = iOSDeviceType.init(rawValue: "iPhone")
+```
+
 b) Adjust your code above so that `iPhone` and `iPad` have associated values of type String which represents the model number, eg: `iPhone("6 Plus")`. Use a switch case and let syntax to print out the model number of each device.
 
+```swift
+enum iOSDeviceType: String {
+case iPhone = "6 Plus"
+case iPad = "Mini"
+case iWatch = "Series 4"
+}
+
+let deviceModel = iOSDeviceType.init(rawValue: "6 Plus")
+
+var myDevice = String()
+
+switch deviceModel! {
+case .iPhone:
+myDevice = deviceModel!.rawValue
+case .iPad:
+myDevice = deviceModel!.rawValue
+case .iWatch:
+myDevice = deviceModel!.rawValue
+
+}
+print(iOSDeviceType.iPhone.rawValue)
+print(iOSDeviceType.iPad.rawValue)
+print(iOSDeviceType.iWatch.rawValue)
+```
 
 ## Question 2
 
 a) Write an enum called `Shape` and give it cases for `triangle`, `rectangle`, `square`, `pentagon`, and `hexagon`.
 
+```swift
+enum Shape {
+    case triangle
+    case square
+    case rectangle
+    case pentagon
+    var case hexagon
+}
+```
 b) Write a method inside `Shape` that returns how many sides the shape has. Create a variable called `myFavoritePolygon` and assign it to one of the shapes above, then print out how many sides it has.
+```swift
 
+```
 c) Re-write `Shape` so that each case has an associated value of type Int that will represent the length of the sides (assume the shapes are regular polygons so all the sides are the same length) and write a method inside that returns the perimeter of the shape.
+```swift
 
+```
 
 ## Question 3
 
 Write an enum called `OperatingSystem` and give it cases for `windows`, `mac`, and `linux`. Create an array of 10 `OperatingSystem` objects where each one is set to a random operating system. Then, iterate through the array and print out a message depending on the operating system.
+```swift
 
+```
 
 ## Question 4
 
