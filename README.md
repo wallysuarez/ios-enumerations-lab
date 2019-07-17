@@ -53,16 +53,69 @@ enum Shape {
     case square
     case rectangle
     case pentagon
-    var case hexagon
+    case hexagon
+
 }
+var myFavoritePolygon = Shape.triangle
 ```
 b) Write a method inside `Shape` that returns how many sides the shape has. Create a variable called `myFavoritePolygon` and assign it to one of the shapes above, then print out how many sides it has.
 ```swift
+enum Shape: String {
+    case triangle = "A triangle has 3 sides."
+    case square = "A square has 4 sides."
+    case rectangle = "A rectangle has 4 sides."
+    case pentagon = "A pentagon has 5 sides."
+    case hexagon = "A hexagon has 6 sides."
 
+    func numOfSides() -> String {
+        switch self {
+        case .triangle:
+            return Shape.triangle.rawValue
+        case .square:
+            return Shape.square.rawValue
+        case .rectangle:
+            return Shape.rectangle.rawValue
+        case .pentagon:
+            return Shape.pentagon.rawValue
+        case .hexagon:
+            return Shape.hexagon.rawValue
+        }
+    }
+
+}
+var myFavoritePolygon = Shape.triangle.numOfSides()
+print(myFavoritePolygon)
 ```
 c) Re-write `Shape` so that each case has an associated value of type Int that will represent the length of the sides (assume the shapes are regular polygons so all the sides are the same length) and write a method inside that returns the perimeter of the shape.
 ```swift
+enum Shape {
+    case triangle(Int)
+    case square(Int)
+    case rectangle(Int)
+    case pentagon(Int)
+    case hexagon(Int)
 
+    func returnPerimeter() -> Int {
+    switch self {
+    case .triangle(let length):
+        return length * 3
+    case .square(let length):
+        return length * 4
+    case .rectangle(let length):
+        return length * 4
+    case .pentagon(let length):
+        return length * 5
+    case .hexagon(let length):
+        return length * 6
+
+        }
+    }
+
+}
+
+var length = 8
+var shapePerimeter = Shape.hexagon(length).returnPerimeter()
+print(shapePerimeter)
 ```
 
 ## Question 3
